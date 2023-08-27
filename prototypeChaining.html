@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Object</title>
+    <script type="text/javascript">
+
+        // Inheritance and Extending Classes
+
+        // Base constructor
+
+        function Car(make, model, transmission) {
+            
+            this.make = make;
+            this.model = model;
+            this.transmission = transmission;
+            this.reportStats = function () {
+                return ("Make: " + this.make + " Model: " + model);
+            }
+        }
+
+        function SUV(make, model, transmission, mpg) {
+            
+            this.mpg = mpg;
+            // Assigning carInfo to "Car" (Above) --> SUV will now be "Car" extending the properties to SUV
+            this.carInfo = Car;
+            this.carInfo(make, model, transmission);
+        }
+
+        // Chaining, without this line "SUV" would not be able to inherit any public properties or methods from what the "Car" object had
+        SUV.prototype = new Car ();
+
+        // Adding a new method to SUV class to get the miles per gallon
+        SUV.prototype.getMPG = function () {
+            
+            return " The SUV mpg is " + this.mpg;
+        }
+
+
+        mySUV = new SUV("Kia", "Sportage", "manual", 32);
+        myCar = new Car("VW", "Jetta", "automatic");
+
+        document.writeln(mySUV.reportStats());
+
+        document.writeln(myCar.getMPG());
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
