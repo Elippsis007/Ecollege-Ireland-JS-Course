@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Variable Scope</title>
+    <script text="JavaScript">
+
+        
+
+        //Global Scope -> Variable is accessible anywhere inside a program
+        var myDog = "Sawyer";
+
+        function Dog(myDog) {
+            //Local Scope -> accessible inside the function 
+            var myDog3 = myDog;
+
+            alert("THis is the local variable: " + myDog3);
+            return myDog3;
+        }
+
+        // assigned myDog2 to "Dog"
+        var myDog2 = Dog("Spot");
+
+        document.writeln("This is the global variable: " + myDog);
+        document.writeln("<BR> This is the \" private \" local variable returned by the function: " + myDog2);
+        document.writeln(myDog3);
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

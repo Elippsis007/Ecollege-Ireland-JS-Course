@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Declaring Arrays</title>
+</head>
+<body>
+    <script>
+
+        // 3 ways to declaring arrays
+
+        var airlines = new Array();
+        airlines[0] = "Delta";
+        airlines[1] = "US Airways";
+        airlines[2] = "American";
+        airlines[3] = "Aerlingus";
+        airlines[4] = "Virgin America";
+
+        var family = new Array("Mark", "Brett", "Kerry", "John", "Rick")
+
+        var states = ["Conneticut", "New York", "Texas", "Washington"]
+
+        function output()
+        {
+            document.getElementById("output").innerHTML = airlines[0] + "<br/>" + family[0] + "<br/>" + states [0];
+        }
+        
+    </script>
+    <p id="output"></p>
+    <button onclick="output()">output</button>
+</body>
+</html>

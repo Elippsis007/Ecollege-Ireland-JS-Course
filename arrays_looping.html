@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Declaring Arrays</title>
+</head>
+<body>
+    <script>
+
+        // 3 ways to declaring arrays
+
+        var airlines = new Array();
+        airlines[0] = "Delta";
+        airlines[1] = "US Airways";
+        airlines[2] = "American";
+        airlines[3] = "Aerlingus";
+        airlines[4] = "Virgin America";
+        airlines[5] = "United";
+        airlines[6] = "Air Canada";
+        airlines[7] = "Southwest";
+        airlines[8] = "British Airways";
+
+        
+        function output()
+        {
+            // looks at the array, sees how long it is and will set the value
+            // i++ will increment us by one each time we go through the array.
+            
+            // for(var i=0; i < airlines.length; i++)
+            
+            // More efficient way is to create a variable called "length"
+            
+            var len = airlines.length;
+            for (var i=0; i < len; i++)
+            {
+                // So this will loop at "i" which is "0"(Delta) and will keep looping
+                // through the array 1, 2 ,3 etc until it reaches the last index.
+                document.getElementById('output').innerHTML += airlines[i] + "<br/>";
+            }
+        }
+        
+    </script>
+    <p id="output"></p>
+    <button onclick="output()">output</button>
+</body>
+</html>

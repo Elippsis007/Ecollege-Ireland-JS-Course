@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Declaring Arrays</title>
+</head>
+<body>
+    <script>
+        var airlines = new Array();
+        airlines[0] = "Delta";
+        airlines[1] = "US Airways";
+        airlines[2] = "American";
+        airlines[3] = "JetBlue";
+        airlines[4] = "Virgin America";
+        airlines[5] = "United";
+        airlines[6] = "Air Canada";
+        airlines[7] = "SouthWest";
+        airlines[8] = "British Airways";
+
+        function output()
+        {
+            var output = "The position of SouthWest is: " + airlines.indexOf("SouthWest");
+            document.getElementById("output").innerHTML = output;
+            
+            // airlines.sort(); // Will loop through the airlines array
+            airlines.reverse(); // Will reverse the output from the array
+            // airlines.push("Air Mexico"); // Adding item into array with .push()
+            airlines.pop(); // Removes last item in the list
+            for(var i=0; i< airlines.length; i++)
+            {
+                document.getElementById('output').innerHTML += "<br/>" + airlines[i];
+            }
+        }
+
+    </script>
+    
+    <p id="output"></p>
+    <button onclick="output()">Output</button>
+</body>
+</html>

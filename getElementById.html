@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Object</title>
+
+    <script>
+        function checkPw(pw) 
+        {
+            if (pw == "chocolate") {
+                document.getElementById("pwStatus").innerHTML = "Password Correct";
+                document.getElementById("password").style.backgroundColor = "rgb(0, 255, 0)";
+            } else {
+                document.getElementById("pwStatus").innerHTML = "";
+                document.getElementById("password").style.backgroundColor = "rgb(225,0,0)";
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <!--Calling the function called "checkPW" it will pass it whatever value the user types in
+    for example: if the user types in pennies, it will pass pennies to check password -->
+    Password: <input type="password" id="password" onchange="checkPw(this.value)" />
+    <output id="pwStatus"></output>
+</body>
+
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+
+    <script type="text/JavaScript">
+
+        function getVal() {
+            var x = document.getElementById("myBtnId").id;
+            document.getElementById("value1").innerHTML = x;
+        }
+
+    </script>
+</head>
+
+<body>
+
+    <form action="">
+        Get the value<br />
+        <input type="button" name="myBtnName" id="myBtnId" value="Press NOW!" onclick="getVal();" /> <br />
+        Value equals <div id="value1"><br /></div><br />
+    </form>
+
+</body>
+
+</html>
